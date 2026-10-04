@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "market-state-filter"
+version = "0.1.0"
+description = "Causal trend-line quality research and strategy validation"
+requires-python = ">=3.12"
+dependencies = ["numpy==2.2.6", "pandas==2.3.3", "scikit-learn==1.7.2"]
+
+[project.scripts]
+market-state-filter = "market_state_filter.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
